@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Mod Pocong Hunter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        /* Mencegah body ikut scroll saat sidebar terbuka */
+        .no-scroll {
+            overflow: hidden;
+        }
+
+        .btn-gradient {
+            padding: 6px 10px;
+            background: linear-gradient(45deg, #ff7a18, #af002d);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        
+        .btn-gradient:hover {
+            opacity: 0.85;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+
+        <header class="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-5 8a9 9 0 110-18 9 9 0 010 18z" />
+                    </svg>
+                    <a href="#" class="text-xl font-extrabold text-gray-900 tracking-tight">
+                        Docs Proyek Mod Pocong Hunter
+                    </a>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="flex flex-1 overflow-hidden">
+
+            <div id="sidebar-overlay" class="fixed inset-0 bg-black opacity-0 lg:hidden z-10 pointer-events-none transition-opacity duration-200 ease-in-out"></div>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8 lg:p-10 xl:p-12">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 border-b pb-4">Daftar proyek game Mod Pocong Hunter 3</h1>
+
+                <!-- Konten Dokumen (dengan styling Markdown) -->
+                <div class="prose max-w-none text-gray-700 space-y-6">
+                	<h2 class="text-2xl font-bold pt-6">1. Mod Level Bar Bar Edition</h2>
+                    <p>
+Ini adalah mod pocong hunter 3 pertama yang aku kerjakan selama 11 hari<br>
+Di mod ini, kamu bakal memainkan tantangan yang lebih panjang dan brutal, kamu harus hadapi kawanan hantu yang jumlahnya sangat banyak. Untuk saat ini, mod ini sudah tersedia level 1 - 6 hutan, rencananya aku bakal update terus modnya sampai stage Gurun Pasir, jadi pantau terus <a href="https://m.youtube.com/@developerindo157">Akun YouTube ku</a>
+					</p>
+					<ul class="list-disc list-inside space-y-1 ml-4">
+                        <li>Versi: 1.11.5</li>
+                        <li>Ukuran: 28.95 MB</li>
+                        <li>Level tersedia: 1 - 6 hutan</li>
+                        <li>Game: Pocong Hunter 3 by Pologames16</li>
+                    </ul>
+					<p>
+<strong>Sedikit catatan:</strong><br>
+Sebelum main, pastikan mood kamu lagi happy
+					</p>
+					<button class="btn-gradient" style="margin-top: 50px;" onClick="download()">Download</button>
+        		</div>
+        	</main>
+    	</div>
+    </div>
+
+    <script>
+        function download() {
+            const url = "https://raw.githubusercontent.com/Malayindoleste/ClassicDev/main/download/Mod-Pocong-Hunter3-1.11.5.apk"; // ganti url file kamu
+            const a = document.createElement("a");
+            a.href = url;
+            a.download = ""; 
+            a.click();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyek Mod Pocong Hunter</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f9fb;
+        }
+        /* Mencegah body ikut scroll saat sidebar terbuka */
+        .no-scroll {
+            overflow: hidden;
+        }
+        
+        .btn-gradient {
+            padding: 6px 10px;
+            background: linear-gradient(45deg, #ff7a18, #af002d);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.25s;
+        }
+        
+        .btn-gradient:hover {
+            opacity: 0.85;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body class="antialiased">
+    <div class="min-h-screen flex flex-col">
+
+        <header class="sticky top-0 z-30 bg-white border-b border-gray-200 shadow-sm">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+                <div class="flex items-center space-x-2">
+                    <svg class="h-8 w-8 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m-5 8a9 9 0 110-18 9 9 0 010 18z" />
+                    </svg>
+                    <a href="#" class="text-xl font-extrabold text-gray-900 tracking-tight">
+                        Docs Proyek ClassicDev
+                    </a>
+                </div>
+
+                <!--                <button id="sidebar-toggle" class="lg:hidden p-2 text-gray-500 hover:text-gray-900 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                    </svg>
+                </button>
+-->
+            </div>
+        </header>
+
+        <div class="flex flex-1 overflow-hidden">
+
+            <!--            <nav id="sidebar" class="fixed inset-y-0 left-0 z-20 w-64 bg-white border-r border-gray-200 lg:sticky lg:top-[56px] lg:flex lg:flex-col overflow-y-auto transform -translate-x-full lg:translate-x-0 transition-transform duration-200 ease-in-out touch-pan-y">
+                <div class="p-6">
+                    <h2 class="text-sm font-semibold text-gray-500 uppercase tracking-wider mt-6 mb-3">Fitur Inti</h2>
+                    <ul class="space-y-1 text-sm">
+                        <li><a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition duration-150">Pengguna & Autentikasi</a></li>
+                        <li><a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition duration-150">API Reference</a></li>
+                        <li><a href="#" class="block px-3 py-2 text-gray-700 hover:text-blue-600 hover:bg-gray-50 rounded-lg transition duration-150">Database Schema</a></li>
+                    </ul>
+                </div>
+            </nav>
+-->
+            <div id="sidebar-overlay" class="fixed inset-0 bg-black opacity-0 lg:hidden z-10 pointer-events-none transition-opacity duration-200 ease-in-out"></div>
+
+            <main class="flex-1 overflow-y-auto p-4 sm:p-8 lg:p-10 xl:p-12">
+                <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4 border-b pb-4">Memulai/Getting Started</h1>
+
+                <!-- Konten Dokumen (dengan styling Markdown) -->
+                <div class="prose max-w-none text-gray-700 space-y-6">
+                    <p class="text-lg leading-relaxed">
+                        Halo! 👋<br>
+                        Ini adalah halaman dokumentasi untuk semua proyek open source yang aku kerjain sebagai hobi.
+                        Aku suka nge-eksperimen sama ide-ide kecil, nyoba teknologi baru, dan bikin sesuatu yang menurutku seru.
+                        Semua proyek di sini bebas kamu pelajari, modifikasi, atau pakai. Semoga bermanfaat dan bisa jadi inspirasi juga. 🚀
+                    </p>
+
+                    <h2 class="text-2xl font-bold pt-6">1. Overview</h2>
+                    <p>
+                        Proyek ini bermula dari rasa penasaran dan keinginan buat nyelesaiin beberapa masalah kecil yang sering aku temui saat ngoding.<br>
+                        Setelah beberapa kali bikin solusi serupa secara berulang, aku mikir, <strong>“kenapa nggak sekalian dibikin jadi proyek yang proper aja?”</strong><br>
+                        Dari situ lahirlah proyek ini, sebuah tool yang awalnya dibuat untuk kebutuhan pribadi, tapi akhirnya aku rilis sebagai open source biar bisa dipelajari dan dipakai siapa aja.<br>
+                        Semoga perjalanan kecil ini bisa <strong>bermanfaat</strong> buatmu juga! 🚀
+                    </p>
+
+                    <h2 class="text-2xl font-bold pt-6">2. Kontribusi</h2>
+                    <p>
+                        Aku selalu terbuka buat siapa pun yang pengen bantu ngembangin proyek ini 🤝✨<br>
+                        Kamu bisa kontribusi dalam bentuk apa pun, mulai dari nambahin fitur kecil, ngebenerin bug, nulis dokumentasi, sampai sekadar ngasih ide.<br>
+                        <br>
+                        Kalau mau kontribusi:<br>
+                    </p>
+                    <ul class="list-disc list-inside space-y-1 ml-4">
+                        <li>Fork dulu repositori GitHub-nya</li>
+
+                        <li>Bikin branch baru</li>
+
+                        <li>Lakuin perubahan</li>
+
+                        <li>Kirim pull request kamu</li>
+                    </ul>
+                    <p>Aku bakal review secepat yang aku bisa. Santai aja, gak ada aturan ketat di sini. Yang penting rapi dan jelas 😄</p>
+                </div>
+                <div class="prose max-w-none text-gray-700 space-y-6">
+                    <h2 class="text-2xl font-bold pt-6">Daftar Proyek</h2>
+                    <button class="btn-gradient" style="margin-top: 50px;">Proyek Mod Game Pocong Hunter</button>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+</body>
+</html>
