@@ -15,6 +15,6 @@ echo "📝 Melakukan commit..."
 git commit -m "$commit_msg"
 
 echo "⬆️ Mengirim ke GitHub..."
-git push
+git push origin main
 
 echo "✨ Selesai!"
